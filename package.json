@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "expo": "~40.0.0",
-    "expo-updates": "~0.4.0",
     "expo-splash-screen": "~0.8.0",
+    "expo-updates": "~0.4.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "~0.63.4",
@@ -22,12 +22,17 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@tsconfig/react-native": "^1.0.2",
+    "@types/globalthis": "^1.0.1",
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
+    "add": "^2.0.6",
     "babel-preset-expo": "~8.3.0",
     "jest-expo": "~40.0.0",
-    "typescript": "~4.0.0"
+    "miragejs": "^0.1.41",
+    "typescript": "~4.0.0",
+    "yarn": "^1.22.10"
   },
   "jest": {
     "preset": "react-native"
