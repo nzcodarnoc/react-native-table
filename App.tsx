@@ -1,19 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import networkMock from "./__mocks__/network-mock";
+import TransactionTable from "./components/TransactionTable";
 
+import networkMock from "./__mocks__/network-mock";
 networkMock();
 
 export default function App() {
-  const [state, setState] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [tableData, setTableData] = useState({
+    columnLabels: [],
+    transactions: [[]],
+  });
   useEffect(() => {
-    fetch("/api/transactions").then((res) => setState(res.data));
+    setIsLoading(true);
+    fetch("/api/transactions")
+      .then((response) => response.json())
+      .then((json) => {
+        setTableData(json);
+        setIsLoading(false);
+      });
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <Text>{JSON.stringify(state)}</Text>
+      {isLoading && <Text>Loading...</Text>}
+      {!isLoading && <TransactionTable tableData={tableData} />}
     </View>
   );
 }
