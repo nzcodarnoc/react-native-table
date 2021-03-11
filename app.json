@@ -1,0 +1,12 @@
+{
+  "name": "ReactNativeTable",
+  "displayName": "ReactNativeTable",
+  "expo": {
+    "name": "ReactNativeTable",
+    "slug": "ReactNativeTable",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
