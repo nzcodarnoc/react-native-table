@@ -1,6 +1,9 @@
 # react-native-table
 
-`yarn web`
+```bash
+yarn install
+yarn web
+```
 
 iOS simulators and Andriod VMs can be started from the Expo web interface.
 
